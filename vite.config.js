@@ -1,15 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { compression } from 'vite-plugin-compression'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    compression({
-      algorithm: 'gzip',
-      ext: '.gz'
-    })
-  ],
+  plugins: [react()],
   
   optimizeDeps: {
     include: [
@@ -23,16 +16,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
     minify: 'esbuild',
-    sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'three-vendor': ['three', '@react-three/fiber'],
-          'drei-vendor': ['@react-three/drei']
-        }
-      }
-    }
+    sourcemap: false
   },
 
   server: {

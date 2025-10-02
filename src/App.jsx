@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react'
-import MainScene from './components/scene/MainScene'
-import Loader from './components/ui/Loader'
-import HeroSection from './components/sections/HeroSection'
-import ProjectsSection from './components/sections/ProjectsSection'
-import ContactSection from './components/sections/ContactSection'
-import { darkPurpleTheme } from './styles/themes'
+import MainScene from './components/scene/MainScene.jsx'
+import Loader from './components/ui/Loader.jsx'
+import HeroSection from './components/sections/HeroSection.jsx'
+import ProjectsSection from './components/sections/ProjectsSection.jsx'
+import ContactSection from './components/sections/ContactSection.jsx'
+import './styles/globals.css'
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
           position: relative;
           width: 100vw;
           height: 100vh;
-          background: ${darkPurpleTheme.colors.background.dark};
+          background: #0a0a0a;
         }
 
         .canvas-container {
@@ -62,32 +62,32 @@ function App() {
         }
 
         ::-webkit-scrollbar-track {
-          background: ${darkPurpleTheme.colors.background.dark};
+          background: #0a0a0a;
         }
 
         ::-webkit-scrollbar-thumb {
-          background: ${darkPurpleTheme.colors.primary};
+          background: #8b5cf6;
           border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: ${darkPurpleTheme.colors.accent};
+          background: #c084fc;
         }
 
         /* Selection styles */
         ::selection {
-          background: ${darkPurpleTheme.colors.primary};
-          color: ${darkPurpleTheme.colors.text.primary};
+          background: #8b5cf6;
+          color: #ffffff;
         }
 
         ::-moz-selection {
-          background: ${darkPurpleTheme.colors.primary};
-          color: ${darkPurpleTheme.colors.text.primary};
+          background: #8b5cf6;
+          color: #ffffff;
         }
 
         /* Focus styles for accessibility */
         *:focus {
-          outline: 2px solid ${darkPurpleTheme.colors.primary};
+          outline: 2px solid #8b5cf6;
           outline-offset: 2px;
         }
 
@@ -108,7 +108,7 @@ function App() {
         }
 
         /* Responsive design */
-        @media (max-width: ${darkPurpleTheme.breakpoints.mobile}) {
+        @media (max-width: 768px) {
           .app {
             height: auto;
             min-height: 100vh;

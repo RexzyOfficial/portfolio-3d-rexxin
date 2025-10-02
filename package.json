@@ -1,0 +1,66 @@
+{
+  "name": "portfolio-3d-rexxin",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Advanced 3D Portfolio with React Three Fiber - Black/Purple Theme",
+  "author": "Rexxin Official",
+  "license": "MIT",
+  "homepage": "https://rexxin.github.io/portfolio-3d-rexxin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rexxin/portfolio-3d-rexxin"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@react-three/fiber": "^8.15.11",
+    "@react-three/drei": "^9.88.13",
+    "@react-three/cannon": "^6.5.2",
+    "@react-three/postprocessing": "^2.9.0",
+    "three": "^0.158.0",
+    "framer-motion": "^10.16.4",
+    "postprocessing": "^6.29.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.1.0",
+    "vite": "^4.4.0",
+    "gh-pages": "^6.0.0"
+  },
+  "keywords": [
+    "react",
+    "three.js",
+    "3d",
+    "portfolio",
+    "webgl",
+    "interactive",
+    "frontend",
+    "developer",
+    "rexxin"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

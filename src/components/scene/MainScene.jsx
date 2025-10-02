@@ -1,40 +1,19 @@
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
-import { EffectComposer, Bloom, ChromaticAberration } from '@react-three/postprocessing'
-import { BlendFunction } from 'postprocessing'
-import CameraRig from './CameraRig'
-import Lighting from '../effects/Lighting'
-import QuantumParticles from '../effects/QuantumParticles'
-import HeroModel from '../models/HeroModel'
-import FloatingProjects from '../models/FloatingProjects'
-import { darkPurpleTheme } from '../../styles/themes'
 
 export default function MainScene() {
   return (
-    <Canvas
-      shadows
-      camera={{ position: [0, 0, 8], fov: 50 }}
-      gl={{ alpha: false, antialias: true }}
-    >
-      <color attach="background" args={[darkPurpleTheme.colors.background.dark]} />
+    <Canvas style={{ background: '#0a0a0a' }}>
+      <ambientLight intensity={0.5} />
+      <pointLight position={[10, 10, 10]} />
       
-      {/* Lighting dengan theme */}
-      <Lighting />
-      
-      {/* Camera Controls */}
-      <CameraRig />
-      
-      {/* 3D Models */}
-      <HeroModel />
-      <FloatingProjects />
-      
-      {/* Effects dengan theme */}
-      <QuantumParticles 
-        count={darkPurpleTheme.effects.particles.count}
-        color={darkPurpleTheme.effects.particles.color}
-      />
-      
-      {/* Post Processing dengan theme */}
+      <mesh rotation={[0.5, 0.5, 0]}>
+        <boxGeometry args={[2, 2, 2]} />
+        <meshStandardMaterial color="#8b5cf6" />
+      </mesh>
+    </Canvas>
+  )
+}      {/* Post Processing dengan theme */}
       <EffectComposer>
         <Bloom
           intensity={darkPurpleTheme.effects.bloom.intensity}

@@ -13,19 +13,4 @@ export default function MainScene() {
       </mesh>
     </Canvas>
   )
-}      {/* Post Processing dengan theme */}
-      <EffectComposer>
-        <Bloom
-          intensity={darkPurpleTheme.effects.bloom.intensity}
-          luminanceThreshold={darkPurpleTheme.effects.bloom.luminanceThreshold}
-          luminanceSmoothing={darkPurpleTheme.effects.bloom.luminanceSmoothing}
-          blendFunction={BlendFunction.ADD}
-        />
-        <ChromaticAberration
-          offset={darkPurpleTheme.effects.chromaticAberration.offset}
-          blendFunction={BlendFunction.NORMAL}
-        />
-      </EffectComposer>
-    </Canvas>
-  )
 }

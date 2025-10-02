@@ -1,21 +1,21 @@
-import React, { Suspense } from 'react'
-import MainScene from './components/scene/MainScene.jsx'
-import HeroSection from './components/sections/HeroSection.jsx'
-import ProjectsSection from './components/sections/ProjectsSection.jsx'
-import ContactSection from './components/sections/ContactSection.jsx'
+import React from 'react'
 import './styles/globals.css'
 
 function App() {
   return (
-    <div className="app">
-      <div className="canvas-container">
-        <MainScene />
-      </div>
-
-      <div className="content-overlay">
-        <HeroSection />
-        <ProjectsSection />
-        <ContactSection />
+    <div style={{ 
+      width: '100vw', 
+      height: '100vh', 
+      background: '#0a0a0a',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      color: 'white',
+      fontSize: '24px'
+    }}>
+      <div>
+        <h1>🚀 Portfolio Rexxin</h1>
+        <p>3D Scene Loading...</p>
       </div>
     </div>
   )
